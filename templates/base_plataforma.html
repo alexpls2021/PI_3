@@ -1,0 +1,99 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block 'head' %}
+    <link rel="stylesheet" href="{% static 'plataforma/css/css.css' %}">
+    <link rel="stylesheet" href="{% static 'plataforma/css/plano_alimentar.css' %}">
+
+{% endblock %}
+
+{% block 'body' %}
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-2">
+                <a href="{% url 'pacientes' %}" class="link-lateral">
+                    <div class="card-lateral">
+                        <img src="{% static 'plataforma/img/paciente.png' %}">
+                        <br>
+                        <br>
+
+                        <h3>Gerenciar Pacientes</h3>
+                    </div>
+                </a>
+
+                <a href="{% url 'dados_paciente_listar' %}" class="link-lateral">
+                    <div class="card-lateral">
+                        <img src="{% static 'plataforma/img/dados_paciente.png' %}">
+                        <br>
+                        <br>
+
+                        <h3>Dados do Pacientes</h3>
+                    </div>
+                </a>
+
+                <a href="{% url 'plano_alimentar_listar' %}" class="link-lateral">
+                    <div class="card-lateral">
+                        <img src="{% static 'plataforma/img/plano_alimentar.png' %}">
+                        <br>
+                        <br>
+
+                        <h3>Plano alimentar</h3>
+                    </div>
+                </a>
+
+            </div>
+
+            <div class="col-md-8">
+                {% block 'plataforma' %}
+
+
+                {% endblock %}
+            </div>
+
+        </div>
+    </div>
+{% endblock%}
+
+
+
+    <body class="bg"> 
+        <header id="header" class="mb-3">
+            <nav class="navbar navbar-light navbar-expand-sm bg-warning">
+                <!--Logo-->
+                <a href="/" class="navbar-brand" style="font-size: 2em;">Uniescolar</a>
+
+                <!--Botão-->
+                <button class="navbar-toggler" data-toggle="collapse" data-target="#navegacao"><span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!--Navegação-->
+                <div class="collapse navbar-collapse" id="navegacao">
+                    <ul class="navbar-nav ml-auto">
+                        
+                        <li class="nav-item">
+                            <a class="nav-link {%if active == 'formulario'%}active{%endif%}" href="/formulario"></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link {%if active == 'escola'%}active{%endif%}" href="escola">Escolas Parceiras</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="/localizacao" class="nav-link {%if active == 'localizacao'%}active{%endif%}">Rastreamento</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="/cadastro" class="nav-link {%if active == 'cadastro'%}active{%endif%}">contato</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="/consultar" class="nav-link {%if active == 'consultar'%}active{%endif%}">Consultar</a>
+                        </li>
+                        
+                        
+                    </ul>
+                </div>
+            </nav>
+        </header>
+        <!-- Conteudo -->
+        {%block content%}{%endblock%}
+        
+
+    </body>
+</html>
