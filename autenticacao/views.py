@@ -1,14 +1,16 @@
-from django.shortcuts import render, redirect, get_object_or_404
-from django.http import HttpResponse
-from . util import password_is_valid, email_html
+import os
+from hashlib import sha256
+
+from django.conf import settings
+from django.contrib import auth, messages
 from django.contrib.auth.models import User
 from django.contrib.messages import constants
-from django.contrib import messages
-from django.contrib import auth
-import os
-from django.conf import settings
+from django.http import HttpResponse
+from django.shortcuts import get_object_or_404, redirect, render
+
 from .models import Ativacao
-from hashlib import sha256
+from .util import email_html, password_is_valid
+
 
 # Create your views here.
 def cadastro(request):

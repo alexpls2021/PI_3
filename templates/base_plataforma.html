@@ -2,8 +2,7 @@
 {% load static %}
 
 {% block 'head' %}
-    <link rel="stylesheet" href="{% static 'plataforma/css/css.css' %}">
-    <link rel="stylesheet" href="{% static 'plataforma/css/plano_alimentar.css' %}">
+    <Link rel="stylesheet" href="{% static 'plataforma/css/css.css' %}">
 
 {% endblock %}
 
@@ -11,33 +10,43 @@
     <div class="container-fluid">
         <div class="row">
             <div class="col-md-2">
-                <a href="{% url 'pacientes' %}" class="link-lateral">
+                <a href="{% url 'plataforma' %}" class="link-lateral">
                     <div class="card-lateral">
-                        <img src="{% static 'plataforma/img/paciente.png' %}">
+                        <img src="{% static 'plataforma/img/pais.png' %}">
                         <br>
                         <br>
 
-                        <h3>Gerenciar Pacientes</h3>
+                        <h3>Gerenciador de cadastros</h3>
                     </div>
                 </a>
 
-                <a href="{% url 'dados_paciente_listar' %}" class="link-lateral">
+                <a href="{% url 'escolas' %}" class="link-lateral">
                     <div class="card-lateral">
-                        <img src="{% static 'plataforma/img/dados_paciente.png' %}">
+                        <img src="{% static 'plataforma/img/escola.png' %}">
                         <br>
                         <br>
 
-                        <h3>Dados do Pacientes</h3>
+                        <h3>Escolas</h3>
                     </div>
                 </a>
 
-                <a href="{% url 'plano_alimentar_listar' %}" class="link-lateral">
+                <a href="{% url 'responsaveis' %}" class="link-lateral">
                     <div class="card-lateral">
-                        <img src="{% static 'plataforma/img/plano_alimentar.png' %}">
+                        <img src="{% static 'plataforma/img/pais.png' %}">
                         <br>
                         <br>
 
-                        <h3>Plano alimentar</h3>
+                        <h3>Responsáveis</h3>
+                    </div>
+                </a>
+
+                <a href="{% url 'transportadores' %}" class="link-lateral">
+                    <div class="card-lateral">
+                        <img src="{% static 'plataforma/img/transporte.png' %}">
+                        <br>
+                        <br>
+
+                        <h3>Transportadores</h3>
                     </div>
                 </a>
 
@@ -55,45 +64,9 @@
 {% endblock%}
 
 
-
-    <body class="bg"> 
-        <header id="header" class="mb-3">
-            <nav class="navbar navbar-light navbar-expand-sm bg-warning">
-                <!--Logo-->
-                <a href="/" class="navbar-brand" style="font-size: 2em;">Uniescolar</a>
-
-                <!--Botão-->
-                <button class="navbar-toggler" data-toggle="collapse" data-target="#navegacao"><span class="navbar-toggler-icon"></span>
-                </button>
-
-                <!--Navegação-->
-                <div class="collapse navbar-collapse" id="navegacao">
-                    <ul class="navbar-nav ml-auto">
-                        
-                        <li class="nav-item">
-                            <a class="nav-link {%if active == 'formulario'%}active{%endif%}" href="/formulario"></a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link {%if active == 'escola'%}active{%endif%}" href="escola">Escolas Parceiras</a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="/localizacao" class="nav-link {%if active == 'localizacao'%}active{%endif%}">Rastreamento</a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="/cadastro" class="nav-link {%if active == 'cadastro'%}active{%endif%}">contato</a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="/consultar" class="nav-link {%if active == 'consultar'%}active{%endif%}">Consultar</a>
-                        </li>
-                        
-                        
-                    </ul>
-                </div>
-            </nav>
-        </header>
         <!-- Conteudo -->
-        {%block content%}{%endblock%}
+        {% block content %}{% endblock %}
         
 
-    </body>
+
 </html>

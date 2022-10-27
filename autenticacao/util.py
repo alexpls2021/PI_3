@@ -1,10 +1,13 @@
+import os
 import re
+
+from django.conf import settings
 from django.contrib import messages
 from django.contrib.messages import constants
 from django.core.mail import EmailMultiAlternatives
 from django.template.loader import render_to_string
 from django.utils.html import strip_tags
-from django.conf import settings
+
 
 def password_is_valid(request, password, confirm_password):
     if len(password) < 6:
