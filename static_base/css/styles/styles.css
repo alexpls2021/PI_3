@@ -1,0 +1,18 @@
+.border-img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 100%;
+    width: 200rem;
+    padding: 0.4rem;
+    border-radius: 40px;
+    border: 1px black solid;
+  }
+
+ 
+  img {
+    max-width: 600px;
+    max-height: 400px;
+    width: auto;
+    height: auto;
+  }

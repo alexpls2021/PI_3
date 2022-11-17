@@ -11,6 +11,8 @@ from django.shortcuts import get_object_or_404, redirect, render
 from .models import Ativacao
 from .util import email_html, password_is_valid
 
+from django.urls import reverse
+
 
 # Create your views here.
 def cadastro(request):
@@ -62,7 +64,7 @@ def logar(request):
         return redirect('/auth/logar')
     else:
         auth.login(request, usuario)
-        return redirect('/plataforma')
+        return redirect(reverse('plataforma:home'))
     
 def sair(request):
     auth.logout(request)

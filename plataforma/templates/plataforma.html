@@ -1,4 +1,5 @@
 {% extends 'base_plataforma.html' %}
+{% load static %}
 
 {% block title %}UniEscolar{% endblock %}
 
@@ -9,7 +10,7 @@
         <!--Imagems-->
         <section id="content" class="mb-5">
             <div id="banners" class="m-auto w-75">
-              <img src="plataforma/img/transporte01.png" class="img-fluid mb-5 border-img">
+              <img src="{% static 'global/img/transporte01.jpg' %}" class="img-fluid mb-5 border border-primary" style="border-width: 2rem !important;">
             </div>
 
             <div id="texto" class="m-auto w-75">
@@ -18,15 +19,15 @@
                 </p>
 
                 <div>
-                  <img src="/plataforma/img/colegio02.jpg" class="img-fluid mb-5 border-img">
+                  <img src="{% static 'global/img/colegio03.jpg' %}" style="img-fluid mb-5 border-img">
                 </div>
 
                 <p style="font-family: Arial, Helvetica, sans-serif;">    
-                    Para o profissional do transporte Escolar capitar clientes em uma instituição de ensino não é fácil     
+                    Para os profissional do transporte Escolar capitar clientes em uma instituição de ensino não é fácil     
                 </p>
 
                 <div>
-                    <img src="/plataforma/img/negocio03.jpg" class="img-fluid mb-5 border-img">
+                    <img src="{% static 'global/img/negocio03.jpg' %}" class="img-fluid mb-5 border-img">
                 </div>
 
                 <p style="font-family: Arial, Helvetica, sans-serif;">    
