@@ -13,4 +13,6 @@ urlpatterns = [
     path('alunos/', views.alunos, name="alunos"),
     path('transportadores/', views.transportadores, name="transportadores"),
 
+    path('home/', views.external_page, name='external'),
+
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

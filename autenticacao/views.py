@@ -68,7 +68,7 @@ def logar(request):
     
 def sair(request):
     auth.logout(request)
-    return redirect('/auth/logar')
+    return redirect(reverse('plataforma:external'))
 
 def ativar_conta(request, token):
     token = get_object_or_404(Ativacao, token=token)

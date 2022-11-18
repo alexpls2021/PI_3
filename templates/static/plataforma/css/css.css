@@ -2,13 +2,19 @@
 
     background-color: #000000;
     margin-top: 20px;
-    padding: 20px;
+    padding: 25px;
     color: #ffc107;
     font-weight: bold;
     text-decoration: none;
     text-align: center;
     box-shadow: 5px 5px 5px #85837c;
+    width: fit-content;
 
+}
+
+.sm-image {
+    width: 60%;
+    height: 60%;
 }
 
 .link-lateral:hover{

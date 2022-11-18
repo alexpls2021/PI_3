@@ -26,3 +26,6 @@ def transportadores(request):
 @login_required(login_url='/auth/logar/')
 def alunos(request):
     return render(request, 'alunos.html')
+
+def external_page(request):
+    return render(request, 'template_external.html')
