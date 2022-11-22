@@ -4,11 +4,71 @@
 
 {%block content%}
 
-<a href="/" class="navbar-brand" style="font-size: 2em;">Uniescolar</a>
-oi 
 
+<body class="bg"> 
+    <header id="header" class="mb-3">
+        <nav class="navbar navbar-light navbar-expand-sm bg-warning">
+            <!--Logo-->
+            <a href="/" class="navbar-brand" style="font-size: 2em;">Uniescolar</a>
 
+            <!--Botão-->
+            <button class="navbar-toggler" data-toggle="collapse" data-target="#navegacao"><span class="navbar-toggler-icon"></span>
+            </button>
 
+            <!--Navegação-->
+            <div class="collapse navbar-collapse" id="navegacao">
+                <ul class="navbar-nav ml-auto">                                                     
+                                       
+                    <li class="nav-item">
+                        <a href="{% url 'plataforma:home' %}">Logar</a> 
+                    </li>
+                                    
+                </ul>
+               
+            </div>
+           
+               
+        </nav>
 
-<a href="{% url 'plataforma:home' %}">Logar</a> 
-{%endblock%}  
+                
+        <article>
+            <!--Imagems-->
+            <section id="content" class="mb-5">
+                <div id="banners" class="m-auto w-75">
+                  <img src="../static/img/transporte01.jpg" class="img-fluid mb-5 border-img">
+                </div>
+
+                <div id="texto" class="m-auto w-75">
+                    <p style="font-family: Arial, Helvetica, sans-serif;"> 
+                        Sabemos como é difícil para uma instituição de ensino indicar um transporte Escolar de qualidade e confiável 
+                    </p>
+
+                    <div>
+                      <img src="../static/img/colegio02.jpg" class="img-fluid mb-5 border-img">
+                    </div>
+
+                    <p style="font-family: Arial, Helvetica, sans-serif;">    
+                        Para o profissional do transporte Escolar capitar clientes em uma instituição de ensino não é fácil     
+                    </p>
+
+                    <div>
+                        <img src="../static/img/negocio03.jpg" class="img-fluid mb-5 border-img">
+                    </div>
+
+                    <p style="font-family: Arial, Helvetica, sans-serif;">    
+                        Com tantas dificuldades para uma instituição de ensino, para o profissional do transporte Escolar e também para os responsáveis do aluno, surgi a UniEscolar  para facilitar a união entre ambos.        
+                    </p>
+                                        
+                </div>
+                                              
+                
+            </section>
+        </article>
+
+    </header>
+    
+
+</body>
+
+{%endblock%} 
+
