@@ -1,0 +1,14 @@
+<nav style="background-color: #ffc107;" class="navbar navbar-expand-lg navbar-dark">
+    <a style="font-weight: bold" class="navbar-brand" href="{% url 'plataforma:home' %}">Uniescolar</a>
+
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+    </button> 
+
+    {% if user.is_authenticated %}
+        <a href="{% url 'auth:sair' %}" class="btn btn-primary">Sair</a>
+    {% else %}
+        <a href="{% url 'plataforma:home' %}">Logar</a>     
+    {% endif %}
+    
+</nav>
